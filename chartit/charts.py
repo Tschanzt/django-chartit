@@ -200,7 +200,7 @@ class Chart(object):
         term_x_axis = [(dss[d['_x_axis_term']]['field_alias'].title(), 
                         d.get('xAxis', 0)) 
                        for (k, d) in so.items()]
-        term_y_axis = [(dss[k]['field_alias'].title(), d.get('xAxis', 0)) 
+        term_y_axis = [(dss[k]['field_alias'].title(), d.get('yAxis', 0)) 
                        for (k, d) in so.items()]
         max_x_axis = max(t[1] for t in term_x_axis)
         max_y_axis = max(t[1] for t in term_y_axis)
