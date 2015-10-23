@@ -219,7 +219,7 @@ class Chart(object):
                 
         if max_y_axis >= y_axis_len:
             self.hcoptions['yAxis']\
-              .extend([HCOptions({})]*(max_y_axis+1-y_axis_len))
+              .extend([HCOptions({}) for item in range(0, (max_y_axis+1-y_axis_len))])
         for i, y_axis in enumerate(self.hcoptions['yAxis']):
             if not y_axis['title']['text']:
                 axis_title = set(t[0] for t in term_y_axis if t[1] == i)
