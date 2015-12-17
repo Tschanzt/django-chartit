@@ -2,8 +2,7 @@ import copy
 from collections import defaultdict
 from itertools import groupby, chain, islice
 from operator import itemgetter
-# use SortedDict instead of native OrderedDict for Python 2.6 compatibility
-from collections import SortedDict
+from collections import OrderedDict as SortedDict
 from validation import clean_dps, clean_pdps
 from chartit.validation import clean_sortf_mapf_mts
 
